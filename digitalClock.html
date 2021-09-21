@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <script src="digitalClock.js"></script>
+</head>
+<body>
+    <style>
+        html, body {
+            display: grid;
+            height: 100%;
+            place-items: center;
+            background: black;
+        }
+        #wrapper {
+            height: 200px;
+            width: 360px;
+            background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0, purple);
+            border-radius: 10px;
+            cursor: default;
+            animation: animate 1.5s linear infinite;
+            
+        }
+        #wrapper #display {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9;
+            background: black;
+            height: 185px;
+            width: 345px;
+            text-align: center;
+            border-radius: 10px;
+            color: white;
+        }
+         #time{
+            line-height: 305px;
+            background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0, purple);
+            font-size: 50px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: animate 19.5s linear infinite;
+            
+        }
+        @keyframes animate {
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+        
+        #tarikh {
+            font-size: 30px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            place-items: center;
+            margin-top: 45px;
+            padding: 0 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -120%);
+            z-index: 9;
+            background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0, purple);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+         }
+       
+    </style>
+
+   
+    <div id="wrapper">
+        <div id="display">
+            <div id="time"></div>
+            <div id="tarikh"></div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
